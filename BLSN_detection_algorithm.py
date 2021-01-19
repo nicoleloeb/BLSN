@@ -78,7 +78,8 @@ def blsnDetection(ceil_path,met_path,ceil_clr_file,
                     visibility for selected averaging period [m]
             
             missing value code = 99999999.9
-    """    # initialize results dataframe
+    """    
+    # initialize results dataframe
     results = pd.DataFrame([], columns=['datetime','top_of_detected_BLSN','category',
                                         'decreasing_profile','above_clear_sky','10m_windspeed',
                                         '10m_winddirection','2m_temperature','2m_rel_hum',
