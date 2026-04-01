@@ -749,7 +749,7 @@ def fractionalBLSN(ceil_path,kazr_path,mpl_path,hsrl_path,skyrad_path,detection_
                                  'hsrl_ldr':blsn_hsrl_ldr[ii],
                                  'cr':blsn_cr[ii],
                                  'valid_criteria':np.max(valid_crit[ii])}
-                results = results.append(chunk_results,ignore_index=True)
+                results = pd.concat([results, pd.DataFrame(chunk_results,index=[0])], ignore_index=True)
             
         
             print(f'----------------------------done {date}----------------------------')
