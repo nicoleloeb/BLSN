@@ -294,7 +294,8 @@ def blsnDetection(ceil_path,met_path,ceil_clr_file,
                                  '2m_rel_hum' : rh_avg[ii],
                                  '2m_visbility' : vis_avg[ii]}
 
-                results = results.append(chunk_results,ignore_index=True)
+                results = pd.concat([results,
+pd.DataFrame(chunk_results,index=[0])], ignore_index=True)
 
             print(f'.........................done {date}.........................')
 
